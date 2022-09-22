@@ -1,7 +1,10 @@
+/* GENERAL */
+
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 body {
@@ -13,26 +16,14 @@ body {
   margin: 0;
 }
 
+/* HEADER */
+
 .header {
   background-color: #fff1f2;
   padding: 25px 50px;
   z-index: 1;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
-
-.sidebar {
-  background-color: #881337;
-  grid-area: 1 / 1 / 3 / 2;
-  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-  padding: 15px;
-}
-
-.main {
-  background-color: #fecdd3;
-}
-
-/* HEADER */
 
 .top {
   display: grid;
@@ -62,7 +53,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  outline: 1px dotted #881337;
+  outline: 2px solid #881337;
 }
 
 .pfp {
@@ -140,6 +131,14 @@ button {
 
 /* SIDEBAR */
 
+.sidebar {
+  background-color: #881337;
+  grid-area: 1 / 1 / 3 / 2;
+  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  padding: 15px;
+}
+
 .dash-title {
   display: flex;
   align-items: center;
@@ -183,3 +182,87 @@ button {
   gap: 30px;
 }
 
+/* MAIN CONTENT */
+
+.main {
+  background-color: #fecdd3;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: min-content 1fr;
+  gap: 35px;
+  padding: 35px;
+  overflow: auto;
+}
+
+.projects {
+  grid-row: 1 / 3;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 35px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);;
+}
+
+.projects .card {
+  border-left: 10px solid #881337;
+}
+
+ul.card {
+  padding: 25px;
+}
+
+.announcement {
+  width: 250px;
+  padding-bottom: 16px;
+}
+
+.announcement:nth-of-type(2) {
+  padding: 16px 0px;
+}
+
+.announcement + .announcement {
+  border-top: 1px solid #e7e5e4;
+}
+
+.announcement p {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #78716c;
+}
+
+.cards-title {
+  padding-bottom: 10px;
+}
+
+.trending1-pfp {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.trending-card {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 25px;
+}
+
+.known-for {
+  color: #78716c;
+  font-size: 14px;
+}
+
+.trending-card:last-of-type {
+  padding-bottom: 0px;
+}
