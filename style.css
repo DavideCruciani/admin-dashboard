@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 /* HEADER */
 
 .header {
-  background-color: #fff1f2;
+  background-color: #fafaf9;
   padding: 25px 50px;
   z-index: 1;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -48,7 +49,7 @@ input[type="text"] {
   border: none;
   width: min(80%, 700px);
   padding: 1em 2em;
-  background-color: #fecdd3;
+  background-color: #e7e5e4;
   font-size: 15px;
 }
 
@@ -134,7 +135,6 @@ button {
 .sidebar {
   background-color: #881337;
   grid-area: 1 / 1 / 3 / 2;
-  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.1);
   z-index: 2;
   padding: 15px;
 }
@@ -185,7 +185,7 @@ button {
 /* MAIN CONTENT */
 
 .main {
-  background-color: #fecdd3;
+  background-color: #e7e5e4;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: min-content 1fr;
@@ -228,8 +228,16 @@ ul.card {
   padding: 16px 0px;
 }
 
+.announcement:last-of-type {
+  padding-top: 16px;
+}
+
 .announcement + .announcement {
   border-top: 1px solid #e7e5e4;
+}
+
+.announcement h5 {
+  font-size: 0.9rem;
 }
 
 .announcement p {
@@ -243,6 +251,7 @@ ul.card {
 
 .cards-title {
   padding-bottom: 10px;
+  font-size: 20px;
 }
 
 .trending1-pfp {
@@ -265,4 +274,39 @@ ul.card {
 
 .trending-card:last-of-type {
   padding-bottom: 0px;
+}
+
+.tag {
+  font-weight: 500;
+}
+
+.cards>.card {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards .card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #78716c;
+}
+
+.cards .card h3 {
+  margin-bottom: 5px;
+}
+
+.action {
+  margin-top: auto;
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.action img {
+  cursor: pointer;
 }
